@@ -7,18 +7,18 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/urfave/cli"
 	"github.com/olekukonko/tablewriter"
+	"github.com/urfave/cli"
 )
 
 //list all tasks
 func CmdList(ctx *cli.Context) {
 
 	var (
-		s string
-		id int
-		title string
-		isDone int
+		s         string
+		id        int
+		title     string
+		isDone    int
 		createdAt int64
 	)
 

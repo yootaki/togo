@@ -13,8 +13,8 @@ func CmdDelete(ctx *cli.Context) {
 
 	var (
 		id string
-		s string
-		m string
+		s  string
+		m  string
 	)
 
 	isAllMode := ctx.String("all")

@@ -13,21 +13,21 @@ var GlobalFlags = []cli.Flag{}
 
 var forceFlags = []cli.Flag{
 	cli.BoolFlag{
-		Name: "force, f",
+		Name:  "force, f",
 		Usage: "Force initialize even if database already existed.",
 	},
 }
 
 var allListFlags = []cli.Flag{
 	cli.BoolFlag{
-		Name: "all, a",
+		Name:  "all, a",
 		Usage: "List all tasks.",
 	},
 }
 
 var allDeleteFlagas = []cli.Flag{
 	cli.BoolFlag{
-		Name: "all, a",
+		Name:  "all, a",
 		Usage: "Delete all tasks.",
 	},
 }
@@ -35,44 +35,44 @@ var allDeleteFlagas = []cli.Flag{
 //commands are slice of command.
 var Commands = []cli.Command{
 	{
-		Name: "init",
-		Usage: "Initialize SQlite database",
+		Name:   "init",
+		Usage:  "Initialize SQlite database",
 		Action: command.CmdInit,
-		Flags: forceFlags,
+		Flags:  forceFlags,
 	},
 	{
-		Name: "add",
+		Name:    "add",
 		Aliases: []string{"a"},
-		Usage: "Add task",
-		Action: command.CmdAdd,
-		Flags: []cli.Flag{},
+		Usage:   "Add task",
+		Action:  command.CmdAdd,
+		Flags:   []cli.Flag{},
 	},
 	{
-		Name: "update",
+		Name:    "update",
 		Aliases: []string{"u"},
-		Usage: "Update task",
-		Action: command.CmdUpdate,
-		Flags: []cli.Flag{},
+		Usage:   "Update task",
+		Action:  command.CmdUpdate,
+		Flags:   []cli.Flag{},
 	},
 	{
-		Name: "done",
+		Name:    "done",
 		Aliases: []string{"d"},
-		Usage: "Mark a task as done",
-		Action: command.CmdDone,
-		Flags: []cli.Flag{},
+		Usage:   "Mark a task as done",
+		Action:  command.CmdDone,
+		Flags:   []cli.Flag{},
 	},
 	{
-		Name: "list",
+		Name:    "list",
 		Aliases: []string{"l"},
-		Usage: "Show all tasks",
-		Action: command.CmdList,
-		Flags: allListFlags,
+		Usage:   "Show all tasks",
+		Action:  command.CmdList,
+		Flags:   allListFlags,
 	},
 	{
-		Name: "delete",
-		Usage: "Delete task",
+		Name:   "delete",
+		Usage:  "Delete task",
 		Action: command.CmdDelete,
-		Flags: allDeleteFlagas,
+		Flags:  allDeleteFlagas,
 	},
 }
 

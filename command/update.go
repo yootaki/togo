@@ -30,7 +30,7 @@ func CmdUpdate(ctx *cli.Context) {
 
 	now := strconv.FormatInt(time.Now().Unix(), 10)
 
-	_, err = db.Exec("UPDATE todos SET title = '" + title + "', updated_at = " + now + " WHERE id = " + id);
+	_, err = db.Exec("UPDATE todos SET title = '" + title + "', updated_at = " + now + " WHERE id = " + id)
 	if err != nil {
 		log.Fatal(err)
 	}

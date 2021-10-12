@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/urfave/cli"
 	_ "github.com/mattn/go-sqlite3"
+	"github.com/urfave/cli"
 )
 
 func main() {
